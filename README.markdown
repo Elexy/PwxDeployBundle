@@ -1,4 +1,4 @@
-FOSUserBundle
+PWXDeployBundle
 =============
 
 The Deploybundle will offer support for deployment tasks tailored towards hosts with less than SSH access.
