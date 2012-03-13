@@ -3,7 +3,7 @@
 namespace Pwx\DeployBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-//use Pwx\DeployBundle\PwxDeployBundle\Lib\CredFile;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Runtime\Runtime;
 
 class PwxDeployBundle extends Bundle
 {
@@ -13,24 +13,28 @@ class PwxDeployBundle extends Bundle
    */
   public function boot()
   {
-    $credFile = new Lib\CredFile();
-    if ( $credentials = $credFile->getCredentials() )
+    $addonArray = array('MYSQLS');
+    //foreach ($this->container->getParameter('pwx_deploy_addons') as $addon)
+    foreach ($addonArray as $addon)
     {
-      $propelConfig = \Propel::getConfiguration();
+      if ( $credentials = Runtime::getCredentials($addon) )
+      {
+        $propelConfig = \Propel::getConfiguration();
 
-      $dsn = $propelConfig['datasources']['default']['connection']['dsn'];
-      $patterns = array('/host=(.*);dbname/', '/;dbname=(.*);charset/');
-      $replaces = array(
-          'host=' . $credentials['MYSQL_HOSTNAME'] . ';dbname',
-          ';dbname=' . $credentials['MYSQL_DATABASE'] . ';charset');
-      $newDsn = preg_replace($patterns, $replaces, $dsn);
-      // "mysql:host=localhost;dbname=projectx;charset=UTF8"
+        $dsn = $propelConfig['datasources']['default']['connection']['dsn'];
+        $patterns = array('/host=(.*);dbname/', '/;dbname=(.*);charset/');
+        $replaces = array(
+            'host=' . $credentials['MYSQLS_HOSTNAME'] . ';dbname',
+            ';dbname=' . $credentials['MYSQLS_DATABASE'] . ';charset');
+        $newDsn = preg_replace($patterns, $replaces, $dsn);
+        // "mysql:host=localhost;dbname=projectx;charset=UTF8"
 
-      $propelConfig['datasources']['default']['connection']['user'] = $credentials['MYSQL_USERNAME'];
-      $propelConfig['datasources']['default']['connection']['password'] = $credentials['MYSQL_PASSWORD'];
-      $propelConfig['datasources']['default']['connection']['dsn'] = $newDsn;
+        $propelConfig['datasources']['default']['connection']['user'] = $credentials['MYSQLS_USERNAME'];
+        $propelConfig['datasources']['default']['connection']['password'] = $credentials['MYSQLS_PASSWORD'];
+        $propelConfig['datasources']['default']['connection']['dsn'] = $newDsn;
 
-      \Propel::setConfiguration($propelConfig);
+        \Propel::setConfiguration($propelConfig);
+      }
     }
   }
 

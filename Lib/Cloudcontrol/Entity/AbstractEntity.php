@@ -1,8 +1,8 @@
 <?php
 
-namespace Cloudcontrol\Entity;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Entity;
 
-use Cloudcontrol\Exception\BadMethodCallException;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Exception\BadMethodCallException;
 
 class AbstractEntity implements \ArrayAccess
 {

@@ -20,12 +20,15 @@ class Configuration implements \Symfony\Component\Config\Definition\Configuratio
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('pwx_deploy');
 
-//        $rootNode
-//            ->children()
-//                ->scalarNode('access_key_id')->isRequired()->end()
-//                ->scalarNode('secret_access_key')->isRequired()->end()
-//                ->scalarNode('acl')->defaultValue('public-read')->end()
-//            ->end();
+        $rootNode
+            ->children()
+                ->booleanNode('enabled')->end()
+                ->arrayNode('addons')
+                  ->prototype('array')
+                  ->children()
+                  ->end()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }

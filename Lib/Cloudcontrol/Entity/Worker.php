@@ -1,8 +1,8 @@
 <?php
 
-namespace Cloudcontrol\Entity;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Entity;
 
-use Cloudcontrol\Api;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Api;
 
 class Worker extends AbstractEntity
 {

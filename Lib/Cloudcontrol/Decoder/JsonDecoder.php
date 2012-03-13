@@ -1,8 +1,8 @@
 <?php
 
-namespace Cloudcontrol\Decoder;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Decoder;
 
-use Cloudcontrol\Exception\DecodingException;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Exception\DecodingException;
 
 class JsonDecoder implements DecoderInterface
 {

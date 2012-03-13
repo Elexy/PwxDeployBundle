@@ -1,6 +1,6 @@
 <?php
 
-namespace Cloudcontrol\Exception;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Exception;
 
 class ApplicationMissingException extends BadMethodCallException
 {

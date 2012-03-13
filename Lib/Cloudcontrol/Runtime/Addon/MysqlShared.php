@@ -1,6 +1,6 @@
 <?php
 
-namespace Cloudcontrol\Runtime\Addon;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Runtime\Addon;
 
 class MysqlDedicated
 {

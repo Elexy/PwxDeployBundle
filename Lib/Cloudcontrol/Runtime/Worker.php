@@ -1,8 +1,8 @@
 <?php
 
-namespace Cloudcontrol\Runtime;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Runtime;
 
-use Cloudcontrol\Exception\RuntimeException;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Exception\RuntimeException;
 
 class Worker extends Runtime
 {

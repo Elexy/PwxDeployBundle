@@ -1,9 +1,9 @@
 <?php
 
-namespace Cloudcontrol\Authentication;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Authentication;
 
-use Cloudcontrol\Decoder\DecoderFactory;
-use Cloudcontrol\Http\Client;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Decoder\DecoderFactory;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Http\Client;
 
 class Token
 {

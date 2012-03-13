@@ -2,13 +2,13 @@
 
 namespace Cloudcontrol;
 
-use Cloudcontrol\Authentication\Token;
-use Cloudcontrol\Entity\Worker;
-use Cloudcontrol\Decoder\DecoderFactory;
-use Cloudcontrol\Http\Client;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Authentication\Token;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Entity\Worker;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Decoder\DecoderFactory;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Http\Client;
 
-use Cloudcontrol\Exception\ApplicationMissingException;
-use Cloudcontrol\Exception\DeploymentMissingException;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Exception\ApplicationMissingException;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Exception\DeploymentMissingException;
 
 use Http\Exception\Client\Gone as GoneException;
 

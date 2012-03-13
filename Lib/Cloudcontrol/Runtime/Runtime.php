@@ -1,10 +1,10 @@
 <?php
 
-namespace Cloudcontrol\Runtime;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Runtime;
 
-use Cloudcontrol\Decoder\DecoderFactory;
-use Cloudcontrol\Exception\InvalidArgumentException;
-use Cloudcontrol\Exception\RuntimeException;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Decoder\DecoderFactory;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Exception\InvalidArgumentException;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Exception\RuntimeException;
 
 class Runtime
 {

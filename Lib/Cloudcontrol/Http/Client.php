@@ -1,9 +1,9 @@
 <?php
 
-namespace Cloudcontrol\Http;
+namespace Pwx\DeployBundle\Lib\Cloudcontrol\Http;
 
-use Cloudcontrol\Api;
-use Cloudcontrol\Authentication\Token;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Api;
+use Pwx\DeployBundle\Lib\Cloudcontrol\Authentication\Token;
 
 use Http\Exception\Factory as HttpExceptionFactory;
 
