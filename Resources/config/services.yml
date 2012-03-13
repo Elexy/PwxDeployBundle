@@ -1,0 +1,4 @@
+parameters:
+  pwx_deploy:
+    addons:
+    - name: MYSQLS
