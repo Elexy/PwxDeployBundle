@@ -36,5 +36,3 @@ class CredFileTest extends \PHPUnit_Framework_TestCase
   }
 
 }
-
-?>

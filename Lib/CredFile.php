@@ -20,6 +20,7 @@ class CredFile
     # read the credentials file
     if ( isset($_ENV['CRED_FILE']) )
     {
+      echo "in";
       $this->string = file_get_contents($_ENV['CRED_FILE'], false);
 
       if ( $this->string == false )
